@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container text-white p-5">
+        <h1 class="text-center mb-5">{{ author }}'s Gallery</h1>
+
+        <div class="d-flex flex-wrap justify-content-between align-items-stretch text-center">
+            {% for i in items %}
+                <a href="{{ i.link }}">
+                    <div class="m-4 flex-fill">
+                        <img src="{{ i.image }}" alt="" width="200">
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+
+{#        <div id="carouselExampleControls" class="carousel slide d-md-block" data-bs-ride="carousel">#}
+{#            <div class="carousel-inner">#}
+{#                {% for i in items %}#}
+{#                    <div class="carousel-item {% if loop.index == 1 %}active{% endif %}">#}
+{#                        <img src="{{ i.image }}" class="d-block w-100" alt="...">#}
+{#                        <div class="carousel-caption d-none d-md-block">#}
+{#                            <h5>{{ i.title}}</h5>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                {% endfor %}#}
+{#                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">#}
+{#                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>#}
+{#                    <span class="visually-hidden">Previous</span>#}
+{#                </button>#}
+{#                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">#}
+{#                    <span class="carousel-control-next-icon" aria-hidden="true"></span>#}
+{#                    <span class="visually-hidden">Next</span>#}
+{#                </button>#}
+{#            </div>#}
+{#        </div>#}
+
+    </div>
+{% endblock %}
